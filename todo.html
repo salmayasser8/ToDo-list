@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/all.css" />
+    <link rel="stylesheet" href="./css/todo.css" />
+    <script defer src="./js/todo.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <section class="todo">
+      <div class="container">
+        <div class="top-btn">
+          <button type="button" class="translate">Arabic</button>
+          <button type="button" class="logout" data-translate="logout">
+            Log out
+          </button>
+        </div>
+        <main>
+          <div class="header">
+            <h1 data-translate="title">ToDo List</h1>
+            <form>
+              <input
+                id="task"
+                type="text"
+                placeholder="Write Your Task"
+                data-placeholder="placeholder"
+                name="task"
+                required
+                autofocus
+              />
+              <button type="button" id="btn" data-translate="add">Add</button>
+            </form>
+          </div>
+          <div class="tasks">
+            <ul type="none"></ul>
+          </div>
+        </main>
+      </div>
+    </section>
+  </body>
+</html>

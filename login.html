@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/login.css" />
+    <script defer src="./js/login.js"></script>
+    <title>login</title>
+  </head>
+  <body>
+    <section class="login">
+      <div class="container">
+        <div class="top-btn">
+          <button type="button" class="translate">Arabic</button>
+          <button type="button" class="logout" data-translate="logout">
+            Log out
+          </button>
+        </div>
+        <main>
+          <div class="card">
+            <div class="wel">
+              <h1 data-translate="welcome">Welcome to TodoApp</h1>
+              <p data-translate="organize">Organize your tasks efficiently</p>
+            </div>
+            <form action="">
+              <h2 data-translate="login">Login</h2>
+              <input
+                id="email"
+                type="email"
+                placeholder="Enter Your Email"
+                data-placeholder="emailPlaceholder"
+                required
+                name="email"
+              />
+              <input
+                id="password"
+                type="password"
+                placeholder="Enter Your Password"
+                data-placeholder="passwordPlaceholder"
+                required
+                name="password"
+              />
+              <button type="button" id="log-btn" data-translate="login">
+                Login
+              </button>
+            </form>
+          </div>
+        </main>
+      </div>
+    </section>
+  </body>
+</html>

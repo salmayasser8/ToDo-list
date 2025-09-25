@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/register.css" />
+    <script defer src="./js/register.js"></script>
+    <title>Register</title>
+  </head>
+  <body>
+    <section class="register">
+      <div class="container">
+        <div class="top-btn">
+          <button type="button" class="translate">Arabic</button>
+          <button type="button" class="logout" data-translate="logout">
+            Log out
+          </button>
+        </div>
+        <main>
+          <div class="card">
+            <div class="wel">
+              <h1 data-translate="welcome">Welcome to TodoApp</h1>
+              <p data-translate="organize">Organize your tasks efficiently</p>
+            </div>
+            <form action="">
+              <h2 data-translate="register">Register</h2>
+              <input
+                id="fname"
+                type="text"
+                placeholder="Enter Your First Name"
+                data-placeholder="fnamePlaceholder"
+                required
+                name="fname"
+              />
+              <input
+                id="lname"
+                type="text"
+                placeholder="Enter Your Last Name"
+                data-placeholder="lnamePlaceholder"
+                required
+                name="lname"
+              />
+              <input
+                id="email"
+                type="email"
+                placeholder="Enter Your Email"
+                data-placeholder="emailPlaceholder"
+                required
+                name="email"
+              />
+              <input
+                id="password"
+                type="password"
+                placeholder="Enter Your Password"
+                data-placeholder="passwordPlaceholder"
+                required
+                name="password"
+              />
+              <button
+                type="button"
+                id="reg-btn"
+                data-translate="register"
+                onclick="register()"
+              >
+                Register
+              </button>
+            </form>
+          </div>
+        </main>
+      </div>
+    </section>
+  </body>
+</html>
