@@ -31,7 +31,6 @@ document.querySelectorAll("[data-placeholder]").forEach(el => {
    document.documentElement.lang = lang;
   document.documentElement.dir = (lang === "ar") ? "rtl" : "ltr";
 }
-
 let currentLang = localStorage.getItem("lang") || "en";
 applyTranslations(currentLang);
 document.querySelector(".translate").addEventListener("click", () => {
@@ -53,7 +52,6 @@ class Task{
 getText(lang){
  if (lang === "ar" && this.textAr) return this.textAr;
   if (lang === "en" && this.textEn) return this.textEn;
-  // fallback if missing one translation
   return this.textAr || this.textEn || "";
   
 }
@@ -117,9 +115,7 @@ render() {
   this.tasks.forEach((task, index) => {
     let li=document.createElement("li");
     let left = document.createElement("div");
-    // left.style.cssText="display:flex; align-items:center;"
     let doneIcon=document.createElement("i")
-   
     doneIcon.classList.add("fa-regular","fa-circle-check") 
     doneIcon.addEventListener("click", () => {
       this.toggleTask(index); 
@@ -142,7 +138,6 @@ if (task.done) {
 left.appendChild(doneIcon);
 left.appendChild(taskText);
 li.appendChild(left)
-    // let ul = document.querySelector("ul");
     let icons=document.createElement("div")
 //delete icon
 let deleteTask=document.createElement("i")
@@ -178,22 +173,18 @@ this.listElement.appendChild(li);
   });
 } 
 } 
-
 let currentUser = JSON.parse(localStorage.getItem("currentUser"));
 let userEmail = currentUser ? currentUser.email : null;
 
 let todo = new ToDoList(document.querySelector("ul"),userEmail);
 todo.render();
-// 2. When button is clicked → call addTask()
-
 document.getElementById("btn").addEventListener("click", function () {
   let taskInput = document.getElementById("task");
   if(taskInput.value.trim() !== "") {
-    todo.addTask(taskInput.value.trim());  // 👈 here we are CALLING addTask()
+    todo.addTask(taskInput.value.trim());  
     taskInput.value = ""; // clear input
   }else{
     alert("please insert task");
-
   }
 });
 document.querySelector(".logout").addEventListener("click", () => {
