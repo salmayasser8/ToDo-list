@@ -52,7 +52,7 @@ button {
 .top-btn {
   display: flex;
   justify-content: flex-end;
-  gap: 2rem;
+  gap: 1rem;
 }
 .top-btn button {
   padding: 1rem;
@@ -64,6 +64,11 @@ button {
   font-size: 1.25rem;
   cursor: pointer;
   border: none;
+}
+@media (max-width: 568px) {
+  .top-btn button {
+    width: 20%;
+  }
 }
 .todo {
   padding-block-start: 3rem;
@@ -124,6 +129,11 @@ form button {
   font-family: var(--thin-font);
   font-size: 2rem;
   cursor: pointer;
+}
+@media (max-width: 568px) {
+  form button {
+    width: 30%;
+  }
 }
 ul li {
   display: flex;
